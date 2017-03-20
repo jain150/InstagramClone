@@ -15,6 +15,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red:83/255, green: 127/255 , blue: 164/255, alpha: 1)
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +28,14 @@ class ProfileViewController: UIViewController {
     @IBAction func onLogoutPressed(_ sender: Any) {
         
         PFUser.logOut()
-        self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+        
+        if PFUser.current() == nil {
+            self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+            print("Logged Out")
+        }
+        else {
+            print("Logout Unsuccessful")
+        }
         
     }
     

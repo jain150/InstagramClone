@@ -14,8 +14,8 @@
 		47215B1D1E7E09EA00523D72 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47215B1C1E7E09EA00523D72 /* InstagramTests.swift */; };
 		47215B281E7E09EA00523D72 /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47215B271E7E09EA00523D72 /* InstagramUITests.swift */; };
 		47215B361E7E72B700523D72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47215B351E7E72B700523D72 /* LoginViewController.swift */; };
+		47306F681E7FDF1D005C3963 /* HomeFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47306F671E7FDF1D005C3963 /* HomeFeedTableViewController.swift */; };
 		476BB5E71E7F5FEC00204053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476BB5E61E7F5FEC00204053 /* Assets.xcassets */; };
-		476BB5E91E7FB83800204053 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BB5E81E7FB83800204053 /* HomeViewController.swift */; };
 		476BB5EC1E7FBB5600204053 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BB5EB1E7FBB5600204053 /* CaptureViewController.swift */; };
 		476BB5EE1E7FBB6700204053 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BB5ED1E7FBB6700204053 /* ProfileViewController.swift */; };
 		50F6FC0582EA0C42B0AB5E2B /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F62509987A83B511BB8E64 /* Pods_Instagram.framework */; };
@@ -56,8 +56,8 @@
 		47215B271E7E09EA00523D72 /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		47215B291E7E09EA00523D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47215B351E7E72B700523D72 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		47306F671E7FDF1D005C3963 /* HomeFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedTableViewController.swift; sourceTree = "<group>"; };
 		476BB5E61E7F5FEC00204053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		476BB5E81E7FB83800204053 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		476BB5EB1E7FBB5600204053 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		476BB5ED1E7FBB6700204053 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6C9AEFB3BD460A497DFC52AB /* Pods-InstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramUITests/Pods-InstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				47215B351E7E72B700523D72 /* LoginViewController.swift */,
-				476BB5E81E7FB83800204053 /* HomeViewController.swift */,
 				476BB5EB1E7FBB5600204053 /* CaptureViewController.swift */,
 				476BB5ED1E7FBB6700204053 /* ProfileViewController.swift */,
+				47306F671E7FDF1D005C3963 /* HomeFeedTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -263,17 +263,20 @@
 					47215B031E7E09E900523D72 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = TSCDBQM29F;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					47215B171E7E09EA00523D72 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = TSCDBQM29F;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 47215B031E7E09E900523D72;
 					};
 					47215B221E7E09EA00523D72 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = TSCDBQM29F;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 47215B031E7E09E900523D72;
 					};
@@ -473,8 +476,8 @@
 				47215B361E7E72B700523D72 /* LoginViewController.swift in Sources */,
 				47215B0A1E7E09EA00523D72 /* ViewController.swift in Sources */,
 				47215B081E7E09EA00523D72 /* AppDelegate.swift in Sources */,
-				476BB5E91E7FB83800204053 /* HomeViewController.swift in Sources */,
 				476BB5EC1E7FBB5600204053 /* CaptureViewController.swift in Sources */,
+				47306F681E7FDF1D005C3963 /* HomeFeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
