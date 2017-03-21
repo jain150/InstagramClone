@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DBm-s3-JqL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="DBm-s3-JqL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,8 +15,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Eu9-sW-3tT"/>
+                        <viewControllerLayoutGuide type="bottom" id="7uR-fV-KNb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -75,20 +76,20 @@
                     <connections>
                         <outlet property="passwordField" destination="Mq1-p1-Qdc" id="mUZ-Rr-oQX"/>
                         <outlet property="usernameField" destination="RGH-xk-cpG" id="lGJ-45-Fe7"/>
-                        <segue destination="mPd-SJ-yGg" kind="presentation" identifier="loginSegue" id="1EZ-Lg-mBu"/>
+                        <segue destination="mPd-SJ-yGg" kind="modal" identifier="loginSegue" id="1EZ-Lg-mBu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+            <point key="canvasLocation" x="672.5" y="152.5"/>
         </scene>
         <!--Capture-->
         <scene sceneID="ZEB-UO-6uT">
             <objects>
                 <viewController id="ZJA-yn-4tc" customClass="CaptureViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I51-cr-gn3"/>
-                        <viewControllerLayoutGuide type="bottom" id="mCK-Ky-YvU"/>
+                        <viewControllerLayoutGuide type="top" id="QsW-17-FBb"/>
+                        <viewControllerLayoutGuide type="bottom" id="x7y-Ug-Bmu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2wd-a6-hPZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -149,20 +150,20 @@
                     <connections>
                         <outlet property="captionField" destination="dgr-ar-E1i" id="Yws-yg-vvZ"/>
                         <outlet property="selectedImage" destination="vZ2-KW-xPJ" id="nBw-ZN-D6z"/>
-                        <segue destination="mPd-SJ-yGg" kind="presentation" identifier="postSegue" id="Ggi-fp-VVZ"/>
+                        <segue destination="mPd-SJ-yGg" kind="modal" identifier="postSegue" id="Ggi-fp-VVZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLP-pd-WER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4148" y="393.55322338830587"/>
+            <point key="canvasLocation" x="2592.5" y="437.5"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="lr2-Zj-RQc">
             <objects>
                 <viewController id="ugs-4e-yYv" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bm5-Xs-8Dc"/>
-                        <viewControllerLayoutGuide type="bottom" id="P0r-nU-QeZ"/>
+                        <viewControllerLayoutGuide type="top" id="Tt8-ad-iP7"/>
+                        <viewControllerLayoutGuide type="bottom" id="tph-9L-QWQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L5C-xK-SYs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -190,12 +191,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="fQR-dI-R6O"/>
                     <connections>
-                        <segue destination="DBm-s3-JqL" kind="presentation" identifier="logoutSegue" id="1DM-W7-PaE"/>
+                        <segue destination="DBm-s3-JqL" kind="modal" identifier="logoutSegue" id="1DM-W7-PaE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGx-Q8-0u6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4148" y="1110"/>
+            <point key="canvasLocation" x="2592.5" y="1233.9499999999998"/>
         </scene>
         <!--Instagram Clone-->
         <scene sceneID="PTH-hh-8st">
@@ -206,33 +207,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeFeedCell" rowHeight="380" id="vGI-sn-Kqj" userLabel="HomeFeedCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeFeedCell" rowHeight="380" id="vGI-sn-Kqj" userLabel="HomeFeedCell" customClass="HomeFeedViewCell" customModule="Instagram" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="380"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vGI-sn-Kqj" id="brf-VF-8w9">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="379"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-l5-suv">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-l5-suv">
                                             <rect key="frame" x="37" y="45" width="300" height="280"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="HOf-l5-suv" secondAttribute="height" multiplier="15:14" id="AZW-xP-LJ1"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOn-L9-tDD">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOn-L9-tDD">
                                             <rect key="frame" x="147" y="16" width="81" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP2-Rj-RyH">
-                                            <rect key="frame" x="157" y="333" width="60" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Caption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eP2-Rj-RyH">
+                                            <rect key="frame" x="138" y="333" width="99" height="38"/>
+                                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="qOn-L9-tDD" secondAttribute="trailing" constant="50" id="3QK-Zx-eC7"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eP2-Rj-RyH" secondAttribute="bottom" constant="10" id="4RF-dh-w7G"/>
+                                        <constraint firstAttribute="trailing" secondItem="HOf-l5-suv" secondAttribute="trailing" constant="38" id="7rt-Sy-8HY"/>
+                                        <constraint firstItem="qOn-L9-tDD" firstAttribute="top" secondItem="brf-VF-8w9" secondAttribute="top" constant="3" id="Izm-ad-kpO"/>
+                                        <constraint firstItem="HOf-l5-suv" firstAttribute="leading" secondItem="brf-VF-8w9" secondAttribute="leading" constant="37" id="Mds-hj-TRO"/>
+                                        <constraint firstItem="qOn-L9-tDD" firstAttribute="leading" secondItem="brf-VF-8w9" secondAttribute="leading" constant="50" id="Qs1-ce-hEf"/>
+                                        <constraint firstAttribute="trailing" secondItem="eP2-Rj-RyH" secondAttribute="trailing" constant="130" id="U6F-LU-GN8"/>
+                                        <constraint firstItem="eP2-Rj-RyH" firstAttribute="leading" secondItem="brf-VF-8w9" secondAttribute="leading" constant="130" id="YnR-RT-IWY"/>
+                                        <constraint firstItem="eP2-Rj-RyH" firstAttribute="top" secondItem="HOf-l5-suv" secondAttribute="bottom" constant="8" id="dsF-5i-Azb"/>
+                                        <constraint firstItem="HOf-l5-suv" firstAttribute="top" secondItem="qOn-L9-tDD" secondAttribute="bottom" constant="3" id="t0P-cD-Sen"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="captionLabel" destination="eP2-Rj-RyH" id="yPP-IF-59t"/>
+                                    <outlet property="homeImageView" destination="HOf-l5-suv" id="Rxb-Am-Y58"/>
+                                    <outlet property="usernameLabel" destination="qOn-L9-tDD" id="DR9-3T-Vlf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -241,10 +259,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Instagram Clone" id="NTG-G9-o5h"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="6Bv-5T-ILg" id="6DG-R1-80m"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cY2-e2-tl5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4148" y="-362.06896551724139"/>
+            <point key="canvasLocation" x="2592.5" y="-402.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="U0d-4U-4d9">
@@ -263,7 +284,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbP-XM-bG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="137"/>
+            <point key="canvasLocation" x="1214.375" y="152.29833333333332"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ygl-hE-cfE">
@@ -281,7 +302,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zm4-5v-JTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="85.5" y="152.5"/>
         </scene>
         <!--Capture-->
         <scene sceneID="UcK-ke-ukd">
@@ -302,7 +323,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6I4-Br-qmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3208.8000000000002" y="300"/>
+            <point key="canvasLocation" x="2005.5" y="333.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="HdE-Uw-bYw">
@@ -323,7 +344,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWp-bv-W8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3209" y="1264"/>
+            <point key="canvasLocation" x="2005.625" y="1405.1466666666665"/>
         </scene>
         <!--Home-->
         <scene sceneID="P9j-0O-YNg">
@@ -344,7 +365,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clj-7n-gL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3208.8000000000002" y="-362.06896551724139"/>
+            <point key="canvasLocation" x="2005.5" y="-402.5"/>
         </scene>
     </scenes>
     <resources>
@@ -353,6 +374,11 @@
         <image name="Home2" width="48" height="48"/>
         <image name="Insta" width="128" height="128"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Ggi-fp-VVZ"/>
     </inferredMetricsTieBreakers>

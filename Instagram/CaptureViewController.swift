@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate {
     
@@ -107,6 +108,16 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
             alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
+        }
+        
+        //Sending to Parse
+        Post.postUserImage(image: selectedImage.image, withCaption: captionField.text) { (success: Bool, error: Error?) in
+            if success {
+                print("Posted to Parse!")
+            }
+            else {
+                print(error?.localizedDescription)
+            }
         }
         
         //Routing to Home

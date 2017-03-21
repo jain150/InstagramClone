@@ -7,21 +7,86 @@
 //
 
 import UIKit
+import Parse
 
 class HomeFeedTableViewController: UITableViewController {
+    
+    @IBOutlet var mainTableView: UITableView!
+    
+    var posts: [PFObject] = []
+    
+    let thisRefreshControl = UIRefreshControl()
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.barTintColor = UIColor(red:83/255, green: 127/255 , blue: 164/255, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
+        mainTableView.estimatedRowHeight = 400
+        mainTableView.rowHeight = UITableViewAutomaticDimension
+        
+        let query = PFQuery(className: "Post")
+        
+        query.order(byDescending: "createdAt")
+        query.includeKey("author")
 
+        query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if error == nil {
+                self.posts = posts!
+                self.mainTableView.reloadData()
+                query.limit = 20
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+        
+        self.mainTableView.reloadData()
+    
+        thisRefreshControl.addTarget(self, action: #selector(retrievePosts), for: .valueChanged)
+        mainTableView.addSubview(thisRefreshControl)
+        retrievePosts()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func retrievePosts() {
+        
+        let query = PFQuery(className: "Post")
+        
+        query.order(byDescending: "createdAt")
+        query.includeKey("author")
+        
+        query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if error == nil {
+                self.posts = posts!
+                self.mainTableView.reloadData()
+                query.limit = 20
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+        
+        thisRefreshControl.endRefreshing()
+    }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.mainTableView.reloadData()
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,23 +97,36 @@ class HomeFeedTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return posts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = mainTableView.dequeueReusableCell(withIdentifier: "HomeFeedCell", for:indexPath) as! HomeFeedViewCell
+        
+        let post = posts[indexPath.row]
+        print("User -- > \(post["author"])")
+        cell.usernameLabel.text = post["author"] as? String
+        cell.captionLabel.text = post["caption"] as? String
+        
+        if let postImage = post.value(forKey: "media") as? PFFile {
+            postImage.getDataInBackground(block: { (imageData: Data?, error: Error?) in
+                guard let data = imageData else {
+                    return
+                }
+                cell.homeImageView.image = UIImage(data: data)
+            })
+        }
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

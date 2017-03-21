@@ -15,6 +15,8 @@
 		47215B281E7E09EA00523D72 /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47215B271E7E09EA00523D72 /* InstagramUITests.swift */; };
 		47215B361E7E72B700523D72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47215B351E7E72B700523D72 /* LoginViewController.swift */; };
 		47306F681E7FDF1D005C3963 /* HomeFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47306F671E7FDF1D005C3963 /* HomeFeedTableViewController.swift */; };
+		47306F6A1E80BACD005C3963 /* HomeFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47306F691E80BACD005C3963 /* HomeFeedViewCell.swift */; };
+		47306F6C1E80CA39005C3963 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47306F6B1E80CA39005C3963 /* Post.swift */; };
 		476BB5E71E7F5FEC00204053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476BB5E61E7F5FEC00204053 /* Assets.xcassets */; };
 		476BB5EC1E7FBB5600204053 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BB5EB1E7FBB5600204053 /* CaptureViewController.swift */; };
 		476BB5EE1E7FBB6700204053 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476BB5ED1E7FBB6700204053 /* ProfileViewController.swift */; };
@@ -57,6 +59,8 @@
 		47215B291E7E09EA00523D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47215B351E7E72B700523D72 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		47306F671E7FDF1D005C3963 /* HomeFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedTableViewController.swift; sourceTree = "<group>"; };
+		47306F691E80BACD005C3963 /* HomeFeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedViewCell.swift; sourceTree = "<group>"; };
+		47306F6B1E80CA39005C3963 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		476BB5E61E7F5FEC00204053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		476BB5EB1E7FBB5600204053 /* CaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
 		476BB5ED1E7FBB6700204053 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				47215B101E7E09EA00523D72 /* LaunchScreen.storyboard */,
 				47215B131E7E09EA00523D72 /* Info.plist */,
 				476BB5E61E7F5FEC00204053 /* Assets.xcassets */,
+				47306F691E80BACD005C3963 /* HomeFeedViewCell.swift */,
+				47306F6B1E80CA39005C3963 /* Post.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -475,7 +481,9 @@
 				476BB5EE1E7FBB6700204053 /* ProfileViewController.swift in Sources */,
 				47215B361E7E72B700523D72 /* LoginViewController.swift in Sources */,
 				47215B0A1E7E09EA00523D72 /* ViewController.swift in Sources */,
+				47306F6C1E80CA39005C3963 /* Post.swift in Sources */,
 				47215B081E7E09EA00523D72 /* AppDelegate.swift in Sources */,
+				47306F6A1E80BACD005C3963 /* HomeFeedViewCell.swift in Sources */,
 				476BB5EC1E7FBB5600204053 /* CaptureViewController.swift in Sources */,
 				47306F681E7FDF1D005C3963 /* HomeFeedTableViewController.swift in Sources */,
 			);

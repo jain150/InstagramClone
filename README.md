@@ -2,7 +2,7 @@
 
 **Instagram Clone** is a photo sharing app using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **14** hours spent in total
 
 ## User Stories
 
@@ -10,9 +10,9 @@ The following **required** functionality is completed:
 
 - [X] User can sign up to create a new account using Parse authentication
 - [X] User can log in and log out of his or her account
-- [ ] The current signed in user is persisted across app restarts
-- [ ] User can take a photo, add a caption, and post it to "Instagram"
-- [ ] User can view the last 20 posts submitted to "Instagram"
+- [X] The current signed in user is persisted across app restarts
+- [X] User can take a photo, add a caption, and post it to "Instagram"
+- [X] User can view the last 20 posts submitted to "Instagram"
 
 The following **optional** features are implemented:
 
@@ -27,6 +27,8 @@ The following **additional** features are implemented:
 
 - [X] Added secure text entry to the password field
 - [X] Added clear button to both the text fields
+- [X] Added Pull to Refresh
+- 
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -37,7 +39,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/lt58doj.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -45,9 +47,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
+- Faced a lot of problems in making the TabBar, using several methods wasting (?) quite some time here.
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Arnav Jain]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
